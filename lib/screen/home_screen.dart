@@ -96,6 +96,12 @@ class _Button extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
+          ),
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(
@@ -103,7 +109,10 @@ class _Button extends StatelessWidget {
               ),
             );
           },
-          child: Text('입장하기'),
+          child: Text(
+            '입장하기',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ],
     );
